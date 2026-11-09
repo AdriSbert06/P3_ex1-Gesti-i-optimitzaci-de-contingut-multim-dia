@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { NavComponent } from '../nav/nav.component';
+import { NavbarComponent } from '../navbar/navbar.component';
 
 @Component({
   selector: 'app-header',
-  imports: [NavComponent],
+  imports: [NavbarComponent],
   templateUrl: './header.component.html',
 })
 export class HeaderComponent {}
