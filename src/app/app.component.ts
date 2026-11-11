@@ -1,13 +1,21 @@
-import { Component, signal } from '@angular/core';
+
+import { Component } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
-//import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { RouterOutlet } from '@angular/router';
+import { IniciComponent } from './inici/inici.component';
 
 @Component({
-  imports: [ HeaderComponent/*, NavComponent*/, FooterComponent],
   selector: 'app-root',
+  standalone: true,
+  imports: [
+    IniciComponent,
+    HeaderComponent,
+    FooterComponent,
+    RouterOutlet
+  ],
   templateUrl: './app.component.html',
 })
-export class App {
-  protected readonly title = signal('p2_tailwind');
+export class AppComponent {
 }
